@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - CONTAR DEL 1 AL 100</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	var inicio = parseInt(prompt("Ingrese desde qué número desea empezar a contar: "));
+	var fin = parseInt(prompt("Ingrese hasta qué número desea contar: (Solo es válido hasta 500"))
+	if (fin <= 500) {
+		while (inicio <= fin) {
+		imprimir(inicio);
+		inicio = inicio + 1;
+		}
+	}
+	
+imprimir("FIN");
+
+</script>

@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR IMC</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	function calcularImc(peso,altura) {
+
+		return (peso / (altura * altura));
+	
+	}
+
+	nombre = prompt("Nombre:");
+	pesoInformado = prompt("Hola " + nombre + ", informa tu peso");
+	alturaInformado = prompt("Hola " + nombre + ", informa tu altura");
+	
+	imcCalculado = calcularImc(pesoInformado,alturaInformado);
+
+	imprimir("Su imc calculado es: " + Math.round(imcCalculado));
+
+	if (imcCalculado < 18.5) {
+		imprimir(nombre + ", su IMC se encuenta debajo de lo recomendado que es 18.5");
+	}
+
+	if (imcCalculado >= 18.5) {
+		if (imcCalculado < 24.9) {
+		imprimir(nombre + ", su IMC se encuentra en un intervalo dentro de lo recomendado");
+		}
+	}
+
+	if (imcCalculado >= 25) {
+		if (imcCalculado < 30) {
+		imprimir(nombre + ", su IMC se encuentra en un intervalo por sobre lo recomendado: Pre-Sobrepreso");
+		}
+	}
+
+	if (imcCalculado >= 30) {
+		imprimir(nombre + ", su IMC se encuentra muy por sobre lo recomendado: Sobrepreso");
+	}
+
+
+
+
+
+
+
+
+
+</script>
+
+
